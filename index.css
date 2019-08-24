@@ -10,7 +10,42 @@ body {
 	color: #50524F;
 }
 
-.results {
-	margin-top: 20px;
+#movies-container {
+
 }
 
+.movie {
+	display: inline-flex;
+}
+
+.card-deck {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: stretch;
+	margin-left: 0;
+	margin-right: 0;
+}
+.card-deck .card {
+  display: block;
+	margin: 10px;
+  flex-basis: 20%; /* change this value for each breakpoint*/
+}
+
+@media screen and (min-width: 576px) {
+	.card-deck .card {
+		flex-basis: 33%;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.card-deck .card {
+		flex-basis: 25%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.card-deck .card {
+		flex-basis: 20%;
+	}
+}
